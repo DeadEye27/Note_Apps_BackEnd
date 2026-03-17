@@ -1,6 +1,6 @@
-const express = require('express');
-const router = express.Router();
-const noteController = require('../controllers/noteControllers');
+import express, { Router } from 'express';
+export const router = express.Router();
+import noteController from '../controllers/noteControllers.js';
 
 router.get('/', noteController.getAllNotes);
 router.get('/:id', noteController.getNoteById);
@@ -8,4 +8,4 @@ router.post('/', noteController.createNote);
 router.put('/:id', noteController.updateNote);
 router.delete('/:id', noteController.deleteNote);
 
-module.exports = router;
+// module.exports = router;

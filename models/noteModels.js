@@ -1,4 +1,4 @@
-const Note = require('../schemas/Note');
+import {Note} from '../schemas/Note.js';
 
 const findAll = async () => {
     return await Note.findAll({
@@ -32,7 +32,7 @@ const deleteById = async (id) => {
     });
 };
 
-module.exports = {
+export default {
     findAll,
     create,
     findById,

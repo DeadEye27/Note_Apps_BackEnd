@@ -1,9 +1,11 @@
-const express = require("express");
-const sequelize = require('./config/database');
-const noteRoutes = require('./routes/noteRoutes');
-const cors = require('cors');
+import express from "express";
+import cors from "cors";
+import { router as noteRoutes } from "./routes/noteRoutes.js";
+import bodyParser from 'body-parser';
+import {sequelize} from './config/database.js'
 
 const app = express();
+// app.use(bodyParser.json());
 
 app.use(cors({
     origin: ['http://localhost', 'http://localhost:5173', 'http://127.0.0.1:5500'],
@@ -12,12 +14,12 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) =>{
     res.send("Hello World!");
 });
 
-require('./schemas/Note');
 app.use('/notes', noteRoutes);
 
 const port = process.env.PORT || 3000;

@@ -1,1 +1,36 @@
+# API Testing
 GET http://localhost:3000/ HTTP/1.1
+
+###
+# GET : All Note
+GET http://localhost:3000/notes HTTP/1.1
+Content-Type: application/json
+
+### 
+# GET : Note by ID
+GET http://localhost:3000/notes/1 HTTP/1.1
+
+###
+# GET : Create Note
+POST http://localhost:3000/notes HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Ini Catatan Pertamaku",
+    "userNote": "Test test ini adalah catatan pertama yang saya buat untuk mengetes apakah server backend bisa menerima inputan data baru"
+}
+
+###
+# PUT : Update Note
+PUT http://localhost:3000/notes/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Updated Ini Catatan Pertamaku",
+    "userNote": "awokawok ini test method PUT atau update, nah ini bisa membuktikan kalau server yang saya buat sudah bisa mengupdate catatan sebelumnya"
+}
+
+###
+# DELETE : Delete Note
+DELETE http://localhost:3000/notes/1 HTTP/1.1
+Content-Type: application/json

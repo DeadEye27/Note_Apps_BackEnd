@@ -1,5 +1,4 @@
-const { Model } = require('sequelize');
-const noteModel = require('../models/noteModels');
+import noteModel from "../models/noteModels.js";
 
 const getAllNotes = async (req, res) => {
     try {
@@ -17,7 +16,9 @@ const getAllNotes = async (req, res) => {
 };
 
 const createNote = async (req, res) => {
-  const { title, userNote } = req.body;
+    console.log(req.body);
+    const { title, userNote } = req.body;
+  
 
   try {
     const newNote = await noteModel.create({ title, userNote });
@@ -106,7 +107,7 @@ const deleteNote = async (req, res) => {
   }
 };
 
-module.exports = {
+export default {
     getAllNotes,
     createNote,
     getNoteById,
