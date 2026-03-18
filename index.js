@@ -8,7 +8,7 @@ const app = express();
 // app.use(bodyParser.json());
 
 app.use(cors({
-    origin: ['http://localhost', 'http://localhost:5173', 'http://127.0.0.1:5500'],
+    origin: ['http://localhost', 'http://localhost:5173', 'http://127.0.0.1:5500', 'http://127.0.0.1:5501'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials:true,
 }));

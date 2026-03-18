@@ -16,8 +16,8 @@ POST http://localhost:3000/notes HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Ini Catatan Pertamaku",
-    "userNote": "Test test ini adalah catatan pertama yang saya buat untuk mengetes apakah server backend bisa menerima inputan data baru"
+    "title": "Ini Catatan Keduaku",
+    "userNote": "Entahlah saya bingung mau nulis apa buat catatan kedua ini awokawok ngatau mau beli truk"
 }
 
 ###
