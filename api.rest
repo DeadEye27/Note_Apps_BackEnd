@@ -16,21 +16,21 @@ POST http://localhost:3000/notes HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Ini Catatan Keduaku",
-    "userNote": "Entahlah saya bingung mau nulis apa buat catatan kedua ini awokawok ngatau mau beli truk"
+    "title": "Ini Catatan Ketigaku",
+    "userNote": "Entahlah saya bingung mau nulis apa buat catatan ketiga ini awokawok ngatau mau beli truk"
 }
 
 ###
 # PUT : Update Note
-PUT http://localhost:3000/notes/1 HTTP/1.1
+PUT http://localhost:3000/notes/3 HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Updated Ini Catatan Pertamaku",
+    "title": "Updated Ini Catatan Ketigaku",
     "userNote": "awokawok ini test method PUT atau update, nah ini bisa membuktikan kalau server yang saya buat sudah bisa mengupdate catatan sebelumnya"
 }
 
 ###
 # DELETE : Delete Note
-DELETE http://localhost:3000/notes/1 HTTP/1.1
+DELETE http://localhost:3000/notes/2 HTTP/1.1
 Content-Type: application/json
