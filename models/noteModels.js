@@ -2,7 +2,7 @@ import {Note} from '../schemas/Note.js';
 
 const findAll = async () => {
     return await Note.findAll({
-        attributes: ['id', 'title', 'userNote'],
+        attributes: ['id', 'title', 'userNote', 'createdAt', 'updatedAt'],
     });
 };
 
@@ -12,7 +12,7 @@ const create = async (noteData) => {
 
 const findById = async (id) => {
     return await Note.findByPk(id, {
-        attributes: ['id', 'title', 'userNote'],
+        attributes: ['id', 'title', 'userNote', 'createdAt', 'updatedAt'],
     });
 };
 

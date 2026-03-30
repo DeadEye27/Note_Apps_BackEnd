@@ -69,7 +69,10 @@ const updateNote = async (req, res) => {
                 message: "Note not found",
             });
         }
-        const updatedNote = await noteModel.updateById(id, { title, userNote });
+        
+        await noteModel.updateById(id, { title, userNote });
+        const updatedNote = await noteModel.findById(id);
+
         res.status(200).json({
             message: "Note update successfully",
             data: updatedNote,
